@@ -11,7 +11,7 @@ if __name__ == '__main__':
     
     # Settings
     root = os.path.dirname(__file__)
-    port = int(os.environ.get('DOWN2_SERVICE_PORT', '8888'))
+    port = int(os.environ.get('WORD_PUZZLES_SERVICE_PORT', '8888'))
     ip = '0.0.0.0'
     useMockup = False
 

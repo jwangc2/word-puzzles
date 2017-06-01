@@ -6,5 +6,4 @@ webpack -p
 cd $directorypath
 echo 'Copying to public...'
 cp '.\src\js\bundle.js' '.\public\js\bundle.js'
-cp '.\src\css\bundle.css' '.\public\css\bundle.css'
 echo 'Completed!'

@@ -1,14 +1,6 @@
-var PostBox = require("./components/PostBox");
+var EntryBox = require("./components/EntryBox");
 
 ReactDOM.render(
-    <PostBox
-        pollPostsUrl="/api/posts"
-        pollEmergenciesUrl="/api/emergency"
-        submitUrl="/api/posts/submit"
-        likeUrl="/api/posts/like"
-        checkinUrl="/api/checkin"
-        longPollInterval={30000}
-        batchSize={15}
-        />,
+    <EntryBox splitUrl="/split/entry" />,
     document.getElementById('content')
 );

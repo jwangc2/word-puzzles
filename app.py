@@ -23,7 +23,7 @@ if __name__ == '__main__':
     
     # Build application
     application = tornado.web.Application([
-        (r"/split/next", SplitHandler),
+        (r"/split/entry", SplitHandler),
         (r"/(.*)", tornado.web.StaticFileHandler, {"path": root, "default_filename": "public/index.html"}),
     ])
     

@@ -19,17 +19,18 @@ class SplitHandler(JsonHandler):
         
         # Get the next entry
         ndx = offset % len(self.keys)
-        offset = (offset + 1) % len(self.keys)
+        next = (ndx + 1) % len(self.keys)
+        prev = (ndx - 1) % len(self.keys)
         key = self.keys[ndx]
         entry = self.gameDict[key]
 
         # Yield for async triage purposes
         entryFuture = Future()
-        entryFuture.set_result((offset, {key: entry}))
+        entryFuture.set_result((prev, next, {"key": key, key: entry}))
         result = yield entryFuture
         
         # Return the de facto result
-        self.response = {"offset": result[0], "entry": result[1]}
+        self.response = {"prev": result[0], "next": result[1], "entry": result[2]}
         self.write_json()
         
     def getOrderedKeys():

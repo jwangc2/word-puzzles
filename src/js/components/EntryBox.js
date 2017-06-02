@@ -79,10 +79,10 @@ var EntryBox = React.createClass({
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={5} sm={5} mdOffset={3} md={2}>
+                    <Col xs={4} sm={5} mdOffset={3} md={2}>
                         <Button block onClick={this.transitionPrev} href="#">&larr;</Button>
                     </Col>
-                    <Col xs={2} sm={2} md={2}>
+                    <Col xs={4} sm={2} md={2}>
                         <form className="offsetForm" onSubmit={this.handleSubmit}>
                             <FormGroup>
                                 <FormControl
@@ -95,7 +95,7 @@ var EntryBox = React.createClass({
                             </FormGroup>
                         </form>
                     </Col>
-                    <Col xs={5} sm={5} md={2}>
+                    <Col xs={4} sm={5} md={2}>
                         <Button block onClick={this.transitionNext} href="#">&rarr;</Button>
                     </Col>
                 </Row>

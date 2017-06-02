@@ -74,15 +74,15 @@ var EntryBox = React.createClass({
         return (
             <Grid fluid={true}>
                 <Row>
-                    <Col sm={12} mdOffset={3} md={6}>
+                    <Col xs={12} sm={12} mdOffset={3} md={6}>
                         <h2 style={{"textAlign": "center"}}>Split the Difference!</h2>
                     </Col>
                 </Row>
                 <Row>
-                    <Col sm={5} mdOffset={3} md={2}>
+                    <Col xs={5} sm={5} mdOffset={3} md={2}>
                         <Button block onClick={this.transitionPrev} href="#">&larr;</Button>
                     </Col>
-                    <Col sm={2} md={2}>
+                    <Col xs={2} sm={2} md={2}>
                         <form className="offsetForm" onSubmit={this.handleSubmit}>
                             <FormGroup>
                                 <FormControl
@@ -95,12 +95,12 @@ var EntryBox = React.createClass({
                             </FormGroup>
                         </form>
                     </Col>
-                    <Col sm={5} md={2}>
+                    <Col xs={5} sm={5} md={2}>
                         <Button block onClick={this.transitionNext} href="#">&rarr;</Button>
                     </Col>
                 </Row>
                 <Row>
-                    <Col sm={12} mdOffset={3} md={6}>
+                    <Col xs={12} sm={12} mdOffset={3} md={6}>
                         <a href="#" onClick={this.toggleAnswer} className="togglePanel">
                             <Panel
                                 collapsible
